@@ -1,0 +1,28 @@
+<mat-toolbar id="header" class="max-w-full mx-auto border-x justify-between">
+  <a routerLink="home"
+    ><img src="{{ logo }}" alt="V2X_Logo" class="w-20 h-fit"
+  /></a>
+  <ul class="flex">
+    <li>
+      <a mat-icon-button [matMenuTriggerFor]="stocks">
+        <mat-icon>analytics</mat-icon>
+      </a>
+    </li>
+    <li>
+      <a routerLink="" mat-icon-button>
+        <mat-icon>description</mat-icon>
+      </a>
+    </li>
+    <li>
+      <a routerLink="" mat-icon-button>
+        <mat-icon>contact_support</mat-icon>
+      </a>
+    </li>
+  </ul>
+
+  <mat-menu #stocks="matMenu">
+    <button routerLink="" mat-menu-item>V2X</button>
+    <button routerLink="" mat-menu-item>Vectrus</button>
+    <button routerLink="" mat-menu-item>Vertex</button>
+  </mat-menu>
+</mat-toolbar>
